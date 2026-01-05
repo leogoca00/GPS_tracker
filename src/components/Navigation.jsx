@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom'
-import { Home, Target, Timer, FolderKanban } from 'lucide-react'
+import { Home, Target, Timer, FolderKanban, FileText, BookOpen } from 'lucide-react'
 
 const navItems = [
   { to: '/', icon: Home, label: 'Inicio' },
   { to: '/objectives', icon: Target, label: 'Objetivos' },
   { to: '/sessions', icon: Timer, label: 'Sesiones' },
   { to: '/projects', icon: FolderKanban, label: 'Proyectos' },
+  { to: '/notes', icon: FileText, label: 'Notas' },
+  { to: '/books', icon: BookOpen, label: 'Libros' },
 ]
 
 export function Navigation() {
@@ -24,7 +26,7 @@ export function Navigation() {
             to={to}
             className={({ isActive }) => `
               flex flex-col items-center justify-center
-              w-16 h-full
+              w-14 h-full
               transition-colors duration-200
               ${isActive 
                 ? 'text-gps-accent' 
@@ -32,8 +34,8 @@ export function Navigation() {
               }
             `}
           >
-            <Icon size={22} strokeWidth={1.5} />
-            <span className="text-[10px] mt-1 font-medium">{label}</span>
+            <Icon size={20} strokeWidth={1.5} />
+            <span className="text-[9px] mt-0.5 font-medium">{label}</span>
           </NavLink>
         ))}
       </div>

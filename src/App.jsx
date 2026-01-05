@@ -5,6 +5,8 @@ import { Home } from './pages/Home'
 import { Objectives } from './pages/Objectives'
 import { Sessions } from './pages/Sessions'
 import { Projects } from './pages/Projects'
+import { Notes } from './pages/Notes'
+import { Books } from './pages/Books'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route path="/objectives" element={<Objectives />} />
             <Route path="/sessions" element={<Sessions />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/books" element={<Books />} />
           </Routes>
           <Navigation />
         </div>
